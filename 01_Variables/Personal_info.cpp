@@ -10,4 +10,6 @@ int main(){
     cout<<"Weight:"<<weight<<endl;
     cout<<"Height:"<<height<<endl;
 
+    return 0;
+
 }
