@@ -2,7 +2,7 @@
 using namespace std;
 
 int main(){
-   int a, b, c;
+   int a, b;
    a = 50;
    b = 20;
    cout<<"Addition= "<<a+b<<endl;
