@@ -7,7 +7,7 @@ int main(){
     cout << " Enter a number:: ";
     cin >> num1;
 
-    cout << ~(num1);
+     cout << " Bitwise NOT: "<< ~num1;
 
     return 0;
 }
