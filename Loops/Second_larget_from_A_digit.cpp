@@ -17,7 +17,7 @@ int main()
             max = temp;
         }
     }
-    int max2 = 0;
+    int max2 = -1;
     for (int i = digit; i > 0; i /= 10)
     {
         temp = i % 10;
@@ -27,6 +27,13 @@ int main()
         }
     }
 
-    cout << max2;
+     if (max2 == -1)
+    {
+        cout << " No 2nd Largest exist.";
+    }
+    else
+    {
+        cout << max2;
+    }
     return 0;
 }
