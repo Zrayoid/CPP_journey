@@ -4,7 +4,10 @@ using namespace std;
 int CountDigits(long long a)
 {
     int count = 0;
-    while( a > 0){
+    if ( a == 0 ){
+        return a;
+    }
+    while( a > 0 || a < 0){
         a = a/10;
         count++;
     }    
