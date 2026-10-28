@@ -8,7 +8,7 @@ double calculateDiscount(double price)
 
 double calculateFinalPrice(double price)
 {
-    if ( price > 1000)
+    if ( price >= 1000)
     {
         return price - calculateDiscount(price);
     }
@@ -22,7 +22,7 @@ int main()
     cout << " Shop above 1000 and get 10 percent Discount\n";
     cout << " Enter the price of the item: ";
     cin >> price;
-    int FinalPrice = calculateFinalPrice(price);
+    double FinalPrice = calculateFinalPrice(price);
     cout << " Price is: " << FinalPrice << endl;
     
     return 0;
