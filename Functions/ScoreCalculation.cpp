@@ -3,20 +3,17 @@ using namespace std;
 
 int calculateBonus(bool completedLevel, bool allCoins)
 {
-    int LevelComplete = 200;
-    int CoinCollected = 300;
-    if ( completedLevel && allCoins ){
-        return LevelComplete + CoinCollected;
-    }
-    else if( completedLevel ){
-        return LevelComplete;
-    }
-    else if ( allCoins)
+   int bonus = 0;
+    if (completedLevel)
     {
-        return CoinCollected;
+        bonus += 50;
     }
-    else
-        return 0;
+    if (allCoins)
+    {
+        bonus += 100;
+    }
+
+    return bonus;
 }
 
 int calculateFinalScore(int &baseScore, int bonus)
