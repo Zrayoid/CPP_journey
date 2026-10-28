@@ -7,7 +7,7 @@ int CountDigits(long long a)
     if ( a == 0 ){
         return a;
     }
-    while( a > 0 || a < 0){
+    while( a !=  0){
         a = a/10;
         count++;
     }    
