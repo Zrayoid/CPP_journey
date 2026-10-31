@@ -34,14 +34,13 @@ int main()
         cout << " Invalid index..";
         return 0;
     }
-    else
-        size--;
-
+   
     for (int j = index; j < size - 1; j++)
     {
         arr[j] = arr[j + 1];
     }
-
+       
+    size--;
     cout << " New Array.\n";
 
     for (int i = 0; i < size; i++)
