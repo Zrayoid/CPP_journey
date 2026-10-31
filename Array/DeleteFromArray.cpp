@@ -4,49 +4,51 @@ using namespace std;
 int main()
 {
     int arr[10];
-    int index, size, value;
+    int index, size;
 
     cout << " Enter the size of Array: ";
     cin >> size;
-    if ( size > 10 || size < 0 )
+    if (size > 10 || size < 0)
     {
         cout << " Invalid size.";
         return 0;
     }
 
-    for ( int i = 0; i < size-1; i++ )
+    for (int i = 0; i < size; i++)
     {
-        cout << " Enter the "<< i << " element: ";
+        cout << " Enter the " << i << " element: ";
         cin >> arr[i];
     }
 
     cout << " Array\n";
-    for ( int i = 0; i < size-1; i++ )
+    for (int i = 0; i < size; i++)
     {
         cout << arr[i] << " ";
     }
     cout << endl;
-    cout << " Enter the value to be deleted: ";
-    cin >> value;
+    cout << " Enter the index to be cleared: ";
+    cin >> index;
 
-    for ( int i = size-1; i > 0; i--)
+    if (index < 0 || index >= size)
     {
-        if ( value == arr[i] )
-        {
-            for ( int j = i; j < size; j++)
-            {
-                arr[j] = arr[j+1];
-            }
-        }
+        cout << " Invalid index..";
+        return 0;
     }
-    size--;
+    else
+        size--;
+
+    for (int j = index; j < size - 1; j++)
+    {
+        arr[j] = arr[j + 1];
+    }
 
     cout << " New Array.\n";
 
-    for ( int i = 0; i < size-1; i++)
+    for (int i = 0; i < size; i++)
     {
         cout << arr[i] << " ";
     }
+    cout << " \nSize of array is:  " << size;
 
     return 0;
 }
