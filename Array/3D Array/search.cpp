@@ -26,6 +26,7 @@ int main()
         cout << endl;
     }
 
+    bool found = false;
     cout << " Enter the Target: ";
     cin >> target;
 
@@ -41,6 +42,7 @@ int main()
                 {
                     cout << "[" << i << "]" << "[" << j << "]" << "[" << k << "]: "<< endl;
                     count ++;
+                    found = true;
                 }
             }
 
@@ -50,7 +52,13 @@ int main()
         cout << endl;
     }
 
-    cout << " Count is: "<< count;
+    if ( !found ){
+        cout << " Element is not found ";
+    }
+    else
+    {
+        cout << " Total Occurence: "<< count;
+    }
 
     return 0;
 }
