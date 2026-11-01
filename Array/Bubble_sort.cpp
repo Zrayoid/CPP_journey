@@ -19,31 +19,12 @@ int main()
         cin >> arr[i];
     }
 
-    cout << " Accesending Order\n";
+    cout << " Ascesending Order\n";
     for (int j = 0; j < size-1; j++)
     {
         for (int i = 0; i < size - 1; i++)
         {
             if (arr[i] > arr[i + 1])
-            {
-                int temp = arr[i];
-                arr[i] = arr[i + 1];
-                arr[i + 1] = temp;
-            }
-        }
-    }
-
-    for (int i = 0; i < size; i++)
-    {
-        cout << arr[i] << " ";
-    }
-
-    cout << " Descending Order\n";
-    for (int j = 0; j < size-1; j++)
-    {
-        for (int i = 0; i < size - 1; i++)
-        {
-            if (arr[i] < arr[i + 1])
             {
                 int temp = arr[i];
                 arr[i] = arr[i + 1];
