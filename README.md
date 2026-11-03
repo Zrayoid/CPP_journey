@@ -19,12 +19,15 @@ Rather than just collecting code, I’m using this journey to strengthen my logi
 | Topic | Focus |
 |---|---|
 | Variables | Storing and working with data |
-| Data Types | Understanding different kinds of values |
-| Conditions | Making decisions in programs |
+| Data Types | Understanding different kinds of values, type conversion and type limits |
+| Operators | Arithmetic, relational, logical, assignment, increment/decrement and ternary operations |
+| Conditions | Making decisions using conditional statements |
 | Loops | Repeating operations and solving iterative problems |
-| Functions | Breaking programs into reusable parts |
-| Bitwise Operators | Working with individual bits and bit manipulation |
-| Arrays | Storing, accessing, and manipulating collections of data |
+| Functions | Reusable code, parameters, return values, pass-by-value and pass-by-reference |
+| Scope & Lifetime | Understanding local, global and static variables and their lifetimes |
+| Arrays | Working with 1D, 2D and 3D arrays |
+| Bitwise Operators | Working with individual bits, bit manipulation and bitwise operations |
+| Pointers | Memory addresses, pointer operations, dereferencing and pointer manipulation |
 
 More topics will be added as I progress through C++.
 
