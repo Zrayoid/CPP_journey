@@ -1,0 +1,156 @@
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int choice;
+
+    // Main menu loop
+    while (true)
+    {
+        cout << "\n========== LOOP MASTER SYSTEM ==========\n";
+        cout << "1. Multiplication Table\n";
+        cout << "2. Prime Numbers in a Range\n";
+        cout << "3. Number Pattern\n";
+        cout << "4. Skip Multiples of 3\n";
+        cout << "5. Nested Loop Matrix\n";
+        cout << "6. Exit\n";
+
+        cout << "\nEnter your choice: ";
+        cin >> choice;
+
+        // Input validation
+        while (cin.fail() || choice < 1 || choice > 6)
+        {
+            cin.clear();
+            cin.ignore(10000, '\n');
+
+            cout << "Invalid choice! Enter again: ";
+            cin >> choice;
+        }
+
+        if (choice == 1)
+        {
+            int num;
+
+            cout << "Enter a number: ";
+            cin >> num;
+
+            cout << "\nMultiplication Table:\n";
+
+            for (int i = 1; i <= 10; i++)
+            {
+                cout << num << " x " << i
+                     << " = " << num * i << endl;
+            }
+        }
+
+        else if (choice == 2)
+        {
+            int start, end;
+
+            cout << "Enter starting number: ";
+            cin >> start;
+
+            cout << "Enter ending number: ";
+            cin >> end;
+
+            cout << "\nPrime Numbers:\n";
+
+            for (int num = start; num <= end; num++)
+            {
+                if (num < 2)
+                    continue;
+
+                bool isPrime = true;
+
+                for (int i = 2; i <= num / i; i++)
+                {
+                    if (num % i == 0)
+                    {
+                        isPrime = false;
+                        break;
+                    }
+                }
+
+                if (isPrime)
+                    cout << num << " ";
+            }
+
+            cout << endl;
+        }
+
+        else if (choice == 3)
+        {
+            int rows;
+
+            cout << "Enter number of rows: ";
+            cin >> rows;
+
+            for (int i = 1; i <= rows; i++)
+            {
+                for (int j = 1; j <= i; j++)
+                {
+                    cout << "* ";
+                }
+
+                cout << endl;
+            }
+        }
+
+        else if (choice == 4)
+        {
+            int limit;
+
+            cout << "Enter limit: ";
+            cin >> limit;
+
+            int sum = 0;
+            int count = 0;
+
+            for (int i = 1; i <= limit; i++)
+            {
+                if (i % 3 == 0)
+                    continue;
+
+                sum += i;
+                count++;
+
+                cout << i << " ";
+            }
+
+            cout << "\n\nSum: " << sum;
+            cout << "\nNumbers counted: " << count << endl;
+        }
+
+        else if (choice == 5)
+        {
+            int rows, columns;
+
+            cout << "Enter rows: ";
+            cin >> rows;
+
+            cout << "Enter columns: ";
+            cin >> columns;
+
+            for (int i = 1; i <= rows; i++)
+            {
+                for (int j = 1; j <= columns; j++)
+                {
+                    cout << "[" << i << "," << j << "] ";
+                }
+
+                cout << endl;
+            }
+        }
+
+        else if (choice == 6)
+        {
+            cout << "\nExiting Loop Master System...\n";
+            break;
+        }
+    }
+
+    return 0;
+}
