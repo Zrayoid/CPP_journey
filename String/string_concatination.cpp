@@ -15,6 +15,7 @@ int main()
     Lastname += '!';
     cout << endl;
     cout << " Final Name: "<< Firstname+" "+Lastname;
+    // adds 2 string2
     
     
 }
